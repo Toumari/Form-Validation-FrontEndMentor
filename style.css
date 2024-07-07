@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(193, 246, 212);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+.card {
+    background-color: #fff;
+    padding-inline: 2rem;
+    padding-block: 1.5rem;
+    border-radius: 10px;
+    display: flex;
+    margin-inline: 1rem;
+    margin-block: 2rem;
+    flex-direction: column;
+    
+}
+
+input[type="text"], input[type="email"] {
+
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+input:focus {
+    border: 2px solid rgb(193, 246, 212)        ;
+}
+
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+fieldset {
+    margin-top: 1.5rem;
+    width: 100%;
+    border: none;
+}
+
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+}
+
+.radio-group {
+    padding: 1rem;
+    border: 2px solid black;
+    margin-top: 1rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+textarea {
+    height: 15rem;
+    resize: none;
+    margin-bottom: 2rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.consent-group {
+    margin-bottom: 2rem;
+}
+
+.consent-copy {
+    font-size: 0.9rem;
+
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(48, 140, 129);
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+button:hover {
+    background-color: rgb(32, 95, 87)
+}
+
+.toast {
+    width: 300px;
+    height: 100px;
+    background-color: rgb(130, 223, 130);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    top: 0;
+    display: none;
+    transition: all 1s linear;
+}
+
+.active {
+    display: flex; 
+    animation: slideIn 4s forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        right: -300px;
+   }
+
+   10% {
+        right: 0;
+   }
+
+   50% {
+        right: 0;
+   }
+
+    100% {
+        right: -300px;
+    }
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    body {
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .form-group input[type="email"] {
+        width: 100%;
+    }
+ 
+    .card {
+        width: 100%;
+        max-width: 960px;
+    }
+
+    .name {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .email {
+        width: 100%;
+    }
+
+    .message {
+        width: 100%;
+        height: 7.5rem;
+    }
+
+    fieldset {
+        display: flex;
+        gap: 1rem;
+    }
+
+    fieldset div {
+        flex: 1;
+    }
+
+}
