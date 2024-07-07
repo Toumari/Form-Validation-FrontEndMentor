@@ -10,6 +10,7 @@ submitBtn.addEventListener("click", (e) => {
   const isValid = form.checkValidity();
 
   if (isValid) {
+    toast.style.backgroundColor = "green";
     toast.classList.add("active");
     fieldset.disabled = true;
     toast.innerText = "Form submitted successfully";
@@ -19,6 +20,7 @@ submitBtn.addEventListener("click", (e) => {
       fieldset.disabled = false;
     }, 5000);
   } else {
+    toast.style.backgroundColor = "red";
     toast.classList.add("active");
     toast.innerText = "Please fill out all fields";
     setTimeout(() => {
