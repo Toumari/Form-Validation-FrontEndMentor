@@ -13,10 +13,10 @@ submitBtn.addEventListener("click", (e) => {
     toast.classList.add("active");
     fieldset.disabled = true;
     toast.innerText = "Form submitted successfully";
+    form.reset();
     setTimeout(() => {
       toast.classList.remove("active");
       fieldset.disabled = false;
-      form.reset();
     }, 5000);
   } else {
     toast.classList.add("active");
